@@ -1,4 +1,4 @@
-git import os
+import os
 import eventlet
 eventlet.monkey_patch()
 
