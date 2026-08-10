@@ -1,0 +1,32 @@
+import axios from 'axios'
+
+const api = axios.create({ baseURL: '/api', headers: { 'Content-Type': 'application/json' } })
+
+api.interceptors.request.use(cfg => {
+  const token = localStorage.getItem('agent_access_token')
+  if (token) cfg.headers.Authorization = `Bearer ${token}`
+  return cfg
+})
+
+api.interceptors.response.use(r => r, async err => {
+  const orig = err.config
+  if (err.response?.status === 401 && !orig._retry) {
+    orig._retry = true
+    const refresh = localStorage.getItem('agent_refresh_token')
+    if (refresh) {
+      try {
+        const r = await axios.post('/api/auth/refresh', {}, { headers: { Authorization: `Bearer ${refresh}` } })
+        localStorage.setItem('agent_access_token', r.data.access_token)
+        orig.headers.Authorization = `Bearer ${r.data.access_token}`
+        return api(orig)
+      } catch {
+        localStorage.removeItem('agent_access_token')
+        localStorage.removeItem('agent_refresh_token')
+        window.location.href = '/login'
+      }
+    }
+  }
+  return Promise.reject(err)
+})
+
+export default api

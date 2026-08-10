@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { font-family: 'Syne', sans-serif; box-sizing: border-box; }
+code, .mono { font-family: 'JetBrains Mono', monospace; }
+body { background: #F0FDF4; color: #111827; margin: 0; min-height: 100vh; }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-thumb { background: #059669; border-radius: 3px; }
+
+.card { @apply bg-white rounded-2xl shadow-sm border border-gray-100 p-5; }
+.btn-primary { @apply bg-primary text-white font-semibold py-2.5 px-5 rounded-xl hover:bg-primary-dark transition-all w-full; }
+.btn-outline { @apply border border-primary text-primary font-semibold py-2.5 px-5 rounded-xl hover:bg-primary-light transition-all w-full; }
+.input-field { @apply w-full border border-gray-200 rounded-xl px-4 py-3 text-sm focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 bg-gray-50 transition-all; }
+.badge-green  { @apply bg-primary-light text-primary-dark text-xs font-semibold px-2.5 py-0.5 rounded-full; }
+.badge-red    { @apply bg-danger-light text-danger text-xs font-semibold px-2.5 py-0.5 rounded-full; }
+.badge-yellow { @apply bg-warn-light text-warn text-xs font-semibold px-2.5 py-0.5 rounded-full; }
