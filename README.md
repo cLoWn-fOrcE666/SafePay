@@ -250,18 +250,14 @@ KYC uploads (NID and selfie images) are stored locally in `backend/uploads/` and
 
 ## 👤 About me
 
-**[Your Full Name]**
-Final-year B.Sc. in Computer Science & Engineering, [Your University], Bangladesh
+Tanvir Ahammad Shadin
+Final-year B.Sc. in Computer Science & Engineering, Mymensingh Engineering College, Bangladesh
 
-📧 [your.email@example.com] · 💼 [LinkedIn URL] · 🐙 [GitHub URL]
+📧 tahammadshadin@gmail.com · 💼 linkedin.com/in/tanvir-ahammad-shadin-b9002623a/ · 🐙 github.com/cLoWn-fOrcE666
 
-I'm interested in secure systems, fintech and applied machine learning, and I'm applying for [Scholarship / Programme name] to continue my studies in this area. I'd welcome feedback on this project, so feel free to open an issue or get in touch.
+I'm interested in secure systems, fintech and applied machine learning, and I'm applying for Scholarship  to continue my studies in this area. I'd welcome feedback on this project, so feel free to open an issue or get in touch.
 
----
 
-## 📄 License
-
-Released under the [MIT License](LICENSE) for academic and educational use.
 
 ---
 
